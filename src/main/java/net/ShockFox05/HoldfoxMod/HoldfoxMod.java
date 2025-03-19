@@ -1,5 +1,7 @@
-package net.ShockFox05.Basic1_21mod;
+package net.ShockFox05.HoldfoxMod;
 
+import net.ShockFox05.HoldfoxMod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -18,16 +20,14 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
-@Mod(Basic1_21Mod.MOD_ID)
-public class Basic1_21Mod {
-    // Define mod id in a common place for everything to reference
-    public static final String MOD_ID = "basicmodlongname";
-    // Directly reference a slf4j logger
+@Mod(HoldfoxMod.MOD_ID)
+public class HoldfoxMod {
+    public static final String MOD_ID = "holdfoxmodsf";
     private static final Logger LOGGER = LogUtils.getLogger();
 
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
-    public Basic1_21Mod(IEventBus modEventBus, ModContainer modContainer) {
+    public HoldfoxMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -35,6 +35,8 @@ public class Basic1_21Mod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModItems.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -48,6 +50,10 @@ public class Basic1_21Mod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.HOLDFOX);
+            event.accept(ModItems.DEATH);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
