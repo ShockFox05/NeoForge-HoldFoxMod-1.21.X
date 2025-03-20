@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.FOX_BLOCK.get());
                         output.accept(ModBlocks.FOX_ORE.get());
+                        output.accept(ModBlocks.FOX_DEEPSLATE_ORE.get());
                     }).build());
 
 

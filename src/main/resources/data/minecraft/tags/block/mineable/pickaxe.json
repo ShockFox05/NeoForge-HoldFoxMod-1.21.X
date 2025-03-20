@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "holdfoxmodsf:fox_block",
+    "holdfoxmodsf:fox_ore",
+    "holdfoxmodsf:fox_deepslate_ore"
+  ]
+}
