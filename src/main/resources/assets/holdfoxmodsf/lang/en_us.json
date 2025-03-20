@@ -1,5 +1,8 @@
 {
   "item.holdfoxmodsf.holdfox": "Tiny Fox",
-  "item.holdfoxmodsf.death": "Death"
+  "item.holdfoxmodsf.death": "Death",
+
+  "block.holdfoxmodsf.fox_block": "Fox Block",
+  "block.holdfoxmodsf.fox_ore": "Fox Ore"
 
 }

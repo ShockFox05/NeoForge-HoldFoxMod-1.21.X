@@ -1,5 +1,6 @@
 package net.ShockFox05.HoldfoxMod;
 
+import net.ShockFox05.HoldfoxMod.block.ModBlocks;
 import net.ShockFox05.HoldfoxMod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -37,6 +38,7 @@ public class HoldfoxMod {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -53,6 +55,10 @@ public class HoldfoxMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.HOLDFOX);
             event.accept(ModItems.DEATH);
+        }
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.FOX_BLOCK);
+            event.accept(ModBlocks.FOX_ORE);
         }
     }
 
