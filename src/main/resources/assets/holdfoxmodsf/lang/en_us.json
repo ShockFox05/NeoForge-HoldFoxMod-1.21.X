@@ -3,6 +3,8 @@
   "item.holdfoxmodsf.death": "Death",
 
   "block.holdfoxmodsf.fox_block": "Fox Block",
-  "block.holdfoxmodsf.fox_ore": "Fox Ore"
+  "block.holdfoxmodsf.fox_ore": "Fox Ore",
 
+  "creativetab.holdfoxmodsf.holdfox_items": "HoldFox Items",
+  "creativetab.holdfoxmodsf.holdfox_blocks": "HoldFox Blocks"
 }
