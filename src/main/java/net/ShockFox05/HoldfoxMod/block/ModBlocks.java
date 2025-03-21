@@ -23,7 +23,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> FOX_BLOCK = registerBlock("fox_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(.125f).requiresCorrectToolForDrops().sound(SoundType.SWEET_BERRY_BUSH)));
+                    .strength(.125f).sound(SoundType.SWEET_BERRY_BUSH)));
 
     public static final DeferredBlock<Block> FOX_ORE = registerBlock("fox_ore",
             () -> new DropExperienceBlock(UniformInt.of(2,4),
