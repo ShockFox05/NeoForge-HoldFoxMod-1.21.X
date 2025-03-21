@@ -22,6 +22,10 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.HOLDFOX.get());
                         output.accept(ModItems.DEATH.get());
+                        //basic items
+
+                        output.accept(ModItems.FOX_CHISEL.get());
+                        //"advanced items"
                     }).build());
 
     public static final Supplier<CreativeModeTab> HOLDFOX_BLOCKS_TAB = CRAETIVE_MODE_TAB.register("holdfox_blocks_tab",
