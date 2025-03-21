@@ -25,7 +25,9 @@ public class FoxChiselItem extends Item {
                     Blocks.DEEPSLATE, Blocks.DEEPSLATE_BRICKS,
                     Blocks.GOLD_BLOCK, Blocks.IRON_BLOCK,
                     Blocks.IRON_BLOCK, Blocks.STONE,
-                    Blocks.NETHERRACK, ModBlocks.FOX_BLOCK.get()
+                    Blocks.NETHERRACK, ModBlocks.FOX_BLOCK.get(),
+                    ModBlocks.FOX_ORE.get(), ModBlocks.FOX_DEEPSLATE_ORE.get(),
+                    ModBlocks.FOX_DEEPSLATE_ORE.get(), ModBlocks.FOX_ORE.get()
             );
     //List.of Map<Block, Block>
 
