@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "holdfoxmodsf:block/magic_fox_block"
+  }
+}

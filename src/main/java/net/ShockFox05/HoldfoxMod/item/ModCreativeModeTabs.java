@@ -36,6 +36,10 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FOX_BLOCK.get());
                         output.accept(ModBlocks.FOX_ORE.get());
                         output.accept(ModBlocks.FOX_DEEPSLATE_ORE.get());
+                        //basic blocks
+
+                        output.accept(ModBlocks.MAGIC_FOX_BLOCK.get());
+                        //"advanced blocks"
                     }).build());
 
 
