@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {"item": "minecraft:apple"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    }
+  },
+  "pattern":[
+    "EEE",
+    "EAE",
+    "EEE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "holdfoxmodsf:emerald_apple"
+  }
+}

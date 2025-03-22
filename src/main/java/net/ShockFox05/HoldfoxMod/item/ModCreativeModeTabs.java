@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         //basic items
 
                         output.accept(ModItems.FOX_CHISEL.get());
+                        output.accept(ModItems.EMERALD_APPLE.get());
                         //"advanced items"
                     }).build());
 

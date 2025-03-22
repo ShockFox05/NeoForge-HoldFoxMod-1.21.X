@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "holdfoxmodsf:fox_ore",
-    "holdfoxmodsf:fox_deepslate_ore"
+    "holdfoxmodsf:fox_deepslate_ore",
+    "holdfoxmodsf:magic_fox_block"
   ]
 }
