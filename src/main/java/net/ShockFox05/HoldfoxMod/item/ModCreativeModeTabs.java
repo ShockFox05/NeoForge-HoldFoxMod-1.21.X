@@ -25,8 +25,15 @@ public class ModCreativeModeTabs {
                         //basic items
 
                         output.accept(ModItems.FOX_CHISEL.get());
-                        output.accept(ModItems.EMERALD_APPLE.get());
                         //"advanced items"
+
+                        output.accept(ModItems.EMERALD_APPLE.get());
+                        output.accept(ModItems.FOX_ESSENCE_IN_A_BOTTLE.get());
+                        //Consumables
+
+                        output.accept(ModItems.FIRE_ESSENCE.get());
+                        output.accept(ModItems.UNSTABLE_FIRE.get());
+                        //Fuels
                     }).build());
 
     public static final Supplier<CreativeModeTab> HOLDFOX_BLOCKS_TAB = CRAETIVE_MODE_TAB.register("holdfox_blocks_tab",
