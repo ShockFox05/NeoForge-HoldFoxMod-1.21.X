@@ -5,7 +5,7 @@
   "item.holdfoxmodsf.fox_chisel": "Fox Chisel",
 
   "item.holdfoxmodsf.emerald_apple": "Emerald Apple",
-  "item.holdfoxmodsf.fox_essence_in_a_bottle": "Fox Essence in a Bottle",
+  "item.holdfoxmodsf.fox_essence_in_a_bottle": "§5Fox Essence in a Bottle§r",
   "item.holdfoxmodsf.fire_essence": "Fire Essence",
   "item.holdfoxmodsf.unstable_fire": "Unstable Fire",
 
@@ -16,5 +16,22 @@
   "block.holdfoxmodsf.magic_fox_block": "Magic Fox Block",
 
   "creativetab.holdfoxmodsf.holdfox_items": "HoldFox Items",
-  "creativetab.holdfoxmodsf.holdfox_blocks": "HoldFox Blocks"
+  "creativetab.holdfoxmodsf.holdfox_blocks": "HoldFox Blocks",
+
+  "tooltip.holdfoxmodsf.fox_chisel_item.shift_down": "Can chisel blocks into bricks.",
+  "tooltip.holdfoxmodsf.fox_chisel_item": "Press §eShift§r for more §dInformation...§r",
+
+  "tooltip.holdfoxmodsf.emerald_apple": "§2Ooh, I bet the§r §3villagers§r §2would love this.§r",
+  "tooltip.holdfoxmodsf.emerald_apple.ctrl_down": "The villagers don't actually care...",
+
+  "tooltip.holdfoxmodsf.fox_essence_in_a_bottle": "Do I wanna know what this §l§6really§r is?",
+  "tooltip.holdfoxmodsf.fox_essence_in_a_bottle.shift_down": "It's just some fox hair in a bottle.",
+
+  "tooltip.holdfoxmodsf.holdfox": "He's just a lil guy",
+  "tooltip.holdfoxmodsf.death": "§4WHAT IS WRONG WITH YOU, WHY WOULD YOU DO THAT????§r",
+  "tooltip.holdfoxmodsf.fire_essence": "Can be used as §6fuel§r.(Texture WIP)",
+  "tooltip.holdfoxmodsf.unstable_fire": "How is this not §4burning§r me?(Texture WIP)",
+
+  "tooltip.holdfoxmodsf.magic_fox_block.tooltip": "Try throwing some §eit§dems§r on top...",
+  "tooltip.holdfoxmodsf.magic_fox_block.shift_down": "Psst, try throwing down, §eGold§r, §cPoppy§r, or §8Death§r"
 }
