@@ -1,6 +1,7 @@
 package net.ShockFox05.HoldfoxMod.block.custom;
 
 import net.ShockFox05.HoldfoxMod.item.ModItems;
+import net.ShockFox05.HoldfoxMod.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -21,6 +22,7 @@ import net.minecraft.world.phys.BlockHitResult;
 
 import java.util.List;
 
+
 public class MagicFoxBlock extends Block {
     public MagicFoxBlock(Properties properties) {
         super(properties);
@@ -36,7 +38,7 @@ public class MagicFoxBlock extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof ItemEntity itemEntity) {
-            if (itemEntity.getItem().getItem() == Items.GOLD_INGOT) {
+            if (isValidItem(itemEntity.getItem())) {
                 // (ABOVE^) What item, turns into, (BELOW) What item
                 itemEntity.setItem(new ItemStack(Items.DIAMOND, itemEntity.getItem().getCount()));
             }
@@ -56,6 +58,10 @@ public class MagicFoxBlock extends Block {
         }
 
         super.stepOn(level, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
