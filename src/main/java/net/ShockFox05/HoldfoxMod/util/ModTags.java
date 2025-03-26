@@ -17,7 +17,6 @@ public class ModTags {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(HoldfoxMod.MOD_ID, name));
         }
     }
-
     public static class Items {
 
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
