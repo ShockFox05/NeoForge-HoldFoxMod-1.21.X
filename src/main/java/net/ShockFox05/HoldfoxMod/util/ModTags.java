@@ -11,7 +11,7 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
     public static class Blocks {
 
-        public static final TagKey<Block> HOLDFOXMOD_BLOCKS = createTag("holdfoxmodsf_Blocks");
+        public static final TagKey<Block> HOLDFOXMOD_BLOCKS = createTag("holdfoxmodsf_blocks");
 
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(ResourceLocation.fromNamespaceAndPath(HoldfoxMod.MOD_ID, name));
