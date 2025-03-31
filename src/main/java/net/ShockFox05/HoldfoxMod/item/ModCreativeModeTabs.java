@@ -62,6 +62,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.FOX_DOOR.get());
                         output.accept(ModBlocks.FOX_TRAPDOOR.get());
 
+                        output.accept(ModBlocks.FOX_LAMP.get());
+
                     }).build());
 
 

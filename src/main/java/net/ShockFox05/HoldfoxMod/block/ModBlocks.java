@@ -1,6 +1,7 @@
 package net.ShockFox05.HoldfoxMod.block;
 
 import net.ShockFox05.HoldfoxMod.HoldfoxMod;
+import net.ShockFox05.HoldfoxMod.block.custom.FoxLampBlock;
 import net.ShockFox05.HoldfoxMod.block.custom.MagicFoxBlock;
 import net.ShockFox05.HoldfoxMod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -60,6 +61,10 @@ public class ModBlocks {
     () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(2f).noOcclusion()));
     public static final DeferredBlock<TrapDoorBlock> FOX_TRAPDOOR = registerBlock("fox_trapdoor",
     () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(2f).noOcclusion()));
+
+    public static final DeferredBlock<Block> FOX_LAMP = registerBlock("fox_lamp",
+            () -> new FoxLampBlock(BlockBehaviour.Properties.of().strength(1.25f)
+                    .lightLevel(state -> state.getValue(FoxLampBlock.CLICKED) ? 15 : 0)));
 
     //non-full blocks
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

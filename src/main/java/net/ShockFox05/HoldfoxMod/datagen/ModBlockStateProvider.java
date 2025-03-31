@@ -2,9 +2,12 @@ package net.ShockFox05.HoldfoxMod.datagen;
 
 import net.ShockFox05.HoldfoxMod.HoldfoxMod;
 import net.ShockFox05.HoldfoxMod.block.ModBlocks;
+import net.ShockFox05.HoldfoxMod.block.custom.FoxLampBlock;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
+import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -42,9 +45,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.FOX_FENCE_GATE);
         blockItem(ModBlocks.FOX_TRAPDOOR, "_bottom");
 
+        customLamp();
     }
 
-    private void blockWithItem(DeferredBlock<?> deferredBlock) {
+    private void customLamp() {
+        getVariantBuilder(ModBlocks.FOX_LAMP.get()).forAllStates(state -> {
+            if (state.getValue(FoxLampBlock.CLICKED)) {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("fox_lamp_on",
+                        ResourceLocation.fromNamespaceAndPath(HoldfoxMod.MOD_ID, "block/" + "fox_lamp_on")))};
+            } else {
+                return new ConfiguredModel[]{new ConfiguredModel(models().cubeAll("fox_lamp_off",
+                        ResourceLocation.fromNamespaceAndPath(HoldfoxMod.MOD_ID, "block/" + "fox_lamp_off")))};
+            }
+        });
+
+        simpleBlockItem(ModBlocks.FOX_LAMP.get(), models().cubeAll("fox_lamp_on",
+                ResourceLocation.fromNamespaceAndPath(HoldfoxMod.MOD_ID, "block/" + "fox_lamp_on")));
+    }
+
+
+        private void blockWithItem(DeferredBlock<?> deferredBlock) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
     private void blockItem(DeferredBlock<?> deferredBlock) {
