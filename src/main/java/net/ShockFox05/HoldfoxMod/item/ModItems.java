@@ -38,8 +38,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> FOX_CHISEL = ITEMS.register("fox_chisel",
             () -> new FoxChiselItem(new Item.Properties().durability(32)));
+
     public static final DeferredItem<Item> FIRE_ESSENCE = ITEMS.register("fire_essence",
-            () -> new FuelItem(new Item.Properties(),900){
+            () -> new FuelItem(new Item.Properties(),500){
                 @Override
                 public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
                     tooltipComponents.add(Component.translatable("tooltip.holdfoxmodsf.fire_essence"));
@@ -54,7 +55,6 @@ public class ModItems {
                     super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
                 }
             });
-
     //"advanced items"
 
     public static final DeferredItem<Item> EMERALD_APPLE = ITEMS.register("emerald_apple",

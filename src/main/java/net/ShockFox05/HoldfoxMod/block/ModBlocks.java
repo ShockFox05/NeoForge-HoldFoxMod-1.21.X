@@ -6,10 +6,10 @@ import net.ShockFox05.HoldfoxMod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -36,8 +36,32 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> MAGIC_FOX_BLOCK = registerBlock("magic_fox_block",
             () -> new MagicFoxBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST_CLUSTER)));
-//"advanced blocks"
+    //"advanced blocks"
 
+    public static final DeferredBlock<StairBlock> FOX_STAIRS = registerBlock("fox_stairs",
+    () -> new StairBlock(ModBlocks.FOX_BLOCK.get().defaultBlockState(),
+            BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<SlabBlock> FOX_SLAB = registerBlock("fox_slab",
+    () -> new SlabBlock(BlockBehaviour.Properties.of().strength(2f)));
+
+    public static final DeferredBlock<PressurePlateBlock> FOX_PRESSURE_PLATE = registerBlock("fox_pressure_plate",
+    () -> new PressurePlateBlock(BlockSetType.IRON, BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<ButtonBlock> FOX_BUTTON = registerBlock("fox_button",
+    () -> new ButtonBlock(BlockSetType.IRON, 30, BlockBehaviour.Properties.of().strength(2f).noCollission()));
+
+    public static final DeferredBlock<FenceBlock> FOX_FENCE = registerBlock("fox_fence",
+    () -> new FenceBlock(BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<FenceGateBlock> FOX_FENCE_GATE = registerBlock("fox_fence_gate",
+    () -> new FenceGateBlock(WoodType.ACACIA, BlockBehaviour.Properties.of().strength(2f)));
+    public static final DeferredBlock<WallBlock> FOX_WALL = registerBlock("fox_wall",
+    () -> new WallBlock(BlockBehaviour.Properties.of().strength(2f)));
+
+    public static final DeferredBlock<DoorBlock> FOX_DOOR = registerBlock("fox_door",
+    () -> new DoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(2f).noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> FOX_TRAPDOOR = registerBlock("fox_trapdoor",
+    () -> new TrapDoorBlock(BlockSetType.WARPED, BlockBehaviour.Properties.of().strength(2f).noOcclusion()));
+
+    //non-full blocks
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

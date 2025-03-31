@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "holdfoxmodsf:item/fox_essence_in_a_bottle"
-  }
-}

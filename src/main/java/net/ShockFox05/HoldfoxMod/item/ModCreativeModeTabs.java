@@ -48,6 +48,20 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.MAGIC_FOX_BLOCK.get());
                         //"advanced blocks"
+
+                        output.accept(ModBlocks.FOX_STAIRS.get());
+                        output.accept(ModBlocks.FOX_SLAB.get());
+
+                        output.accept(ModBlocks.FOX_PRESSURE_PLATE.get());
+                        output.accept(ModBlocks.FOX_BUTTON.get());
+
+                        output.accept(ModBlocks.FOX_FENCE.get());
+                        output.accept(ModBlocks.FOX_FENCE_GATE.get());
+                        output.accept(ModBlocks.FOX_FENCE_GATE.get());
+
+                        output.accept(ModBlocks.FOX_DOOR.get());
+                        output.accept(ModBlocks.FOX_TRAPDOOR.get());
+
                     }).build());
 
 

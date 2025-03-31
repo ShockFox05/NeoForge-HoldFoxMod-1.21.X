@@ -15,6 +15,19 @@
 
   "block.holdfoxmodsf.magic_fox_block": "Magic Fox Block",
 
+  "block.holdfoxmodsf.fox_stairs": "Fox Stair",
+  "block.holdfoxmodsf.fox_slab": "Fox Slab",
+
+  "block.holdfoxmodsf.fox_button": "Fox Button",
+  "block.holdfoxmodsf.fox_pressure_plate": "Fox Pressure Plate",
+
+  "block.holdfoxmodsf.fox_fence": "Fox Fence",
+  "block.holdfoxmodsf.fox_fence_gate": "Fox Fence Gate",
+  "block.holdfoxmodsf.fox_wall": "Fox Wall",
+
+  "block.holdfoxmodsf.fox_door": "Fox Door",
+  "block.holdfoxmodsf.fox_trapdoor": "Fox Trapdoor",
+
   "creativetab.holdfoxmodsf.holdfox_items": "HoldFox Items",
   "creativetab.holdfoxmodsf.holdfox_blocks": "HoldFox Blocks",
 
@@ -22,9 +35,9 @@
   "tooltip.holdfoxmodsf.fox_chisel_item": "Press §eShift§r for more §dInformation...§r",
 
   "tooltip.holdfoxmodsf.emerald_apple": "§2Ooh, I bet the§r §3villagers§r §2would love this.§r",
-  "tooltip.holdfoxmodsf.emerald_apple.ctrl_down": "The villagers don't actually care...",
+  "tooltip.holdfoxmodsf.emerald_apple.ctrl_down": "§2The villagers don't actually care...§r",
 
-  "tooltip.holdfoxmodsf.fox_essence_in_a_bottle": "Do I wanna know what this §l§6really§r is?",
+  "tooltip.holdfoxmodsf.fox_essence_in_a_bottle": "Do I wanna know what this §l§6really§r is?(Texture WIP)",
   "tooltip.holdfoxmodsf.fox_essence_in_a_bottle.shift_down": "It's just some fox hair in a bottle.",
 
   "tooltip.holdfoxmodsf.holdfox": "He's just a lil guy",
