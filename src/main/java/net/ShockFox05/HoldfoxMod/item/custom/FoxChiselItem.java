@@ -1,6 +1,7 @@
 package net.ShockFox05.HoldfoxMod.item.custom;
 
 import net.ShockFox05.HoldfoxMod.block.ModBlocks;
+import net.ShockFox05.HoldfoxMod.component.ModDataComponents;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -54,6 +55,8 @@ public class FoxChiselItem extends Item {
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
                 level.playSound(null,context.getClickedPos(), SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS);
+
+                context.getItemInHand().set(ModDataComponents.COORDINATES, context.getClickedPos());
             }
 
         }
@@ -67,6 +70,10 @@ public class FoxChiselItem extends Item {
             tooltipComponents.add(Component.translatable("tooltip.holdfoxmodsf.fox_chisel_item.shift_down"));
         } else {
             tooltipComponents.add(Component.translatable("tooltip.holdfoxmodsf.fox_chisel_item"));
+        }
+
+        if(stack.get(ModDataComponents.COORDINATES) != null) {
+            tooltipComponents.add(Component.literal("Last Block changed at " + stack.get(ModDataComponents.COORDINATES)));
         }
 
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);

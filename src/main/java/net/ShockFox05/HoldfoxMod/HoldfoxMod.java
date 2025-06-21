@@ -1,6 +1,7 @@
 package net.ShockFox05.HoldfoxMod;
 
 import net.ShockFox05.HoldfoxMod.block.ModBlocks;
+import net.ShockFox05.HoldfoxMod.component.ModDataComponents;
 import net.ShockFox05.HoldfoxMod.item.ModCreativeModeTabs;
 import net.ShockFox05.HoldfoxMod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +43,9 @@ public class HoldfoxMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModDataComponents.register(modEventBus);
+
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
