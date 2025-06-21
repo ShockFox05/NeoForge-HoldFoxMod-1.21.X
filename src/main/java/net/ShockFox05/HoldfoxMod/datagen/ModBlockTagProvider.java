@@ -2,6 +2,7 @@ package net.ShockFox05.HoldfoxMod.datagen;
 
 import net.ShockFox05.HoldfoxMod.HoldfoxMod;
 import net.ShockFox05.HoldfoxMod.block.ModBlocks;
+import net.ShockFox05.HoldfoxMod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -31,5 +32,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.FOX_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.FOX_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.FOX_WALL.get());
+
+        tag(ModTags.Blocks.NEEDS_FOX_TOOL)
+                .addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_FOX_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
+                .remove(ModTags.Blocks.NEEDS_FOX_TOOL);
     }
 }

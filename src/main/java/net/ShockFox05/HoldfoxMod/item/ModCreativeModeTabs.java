@@ -25,6 +25,12 @@ public class ModCreativeModeTabs {
                         //basic items
 
                         output.accept(ModItems.FOX_CHISEL.get());
+                        output.accept(ModItems.FOX_SWORD.get());
+                        output.accept(ModItems.FOX_PICKAXE.get());
+                        output.accept(ModItems.FOX_SHOVEL.get());
+                        output.accept(ModItems.FOX_AXE.get());
+                        output.accept(ModItems.FOX_HOE.get());
+                        output.accept(ModItems.FOX_HAMMER.get());
                         //"advanced items"
 
                         output.accept(ModItems.EMERALD_APPLE.get());

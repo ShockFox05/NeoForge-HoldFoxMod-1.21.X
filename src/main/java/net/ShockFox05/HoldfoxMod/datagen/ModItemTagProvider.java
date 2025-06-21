@@ -6,6 +6,7 @@ import net.ShockFox05.HoldfoxMod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -26,5 +27,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.GOLD_INGOT);
         tag(ModTags.Items.HOLDFOXMOD_ITEMS)
                 .add(ModItems.DEATH.get());
+        tag(ItemTags.SWORDS)
+                .add(ModItems.FOX_SWORD.get());
+        tag(ItemTags.PICKAXES)
+                .add(ModItems.FOX_PICKAXE.get());
+        tag(ItemTags.SHOVELS)
+                .add(ModItems.FOX_SHOVEL.get());
+        tag(ItemTags.AXES)
+                .add(ModItems.FOX_AXE.get());
+        tag(ItemTags.HOES)
+                .add(ModItems.FOX_HOE.get());
     }
 }
